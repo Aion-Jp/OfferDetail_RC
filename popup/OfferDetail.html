@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang=ja dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport">
+        <link rel="stylesheet" href="./offerdetail.css">
+        <title>案件詳細</title>
+    </head>
+    <body>
+        <header class="header">
+            仕事No.<strong id='job_no'></strong>
+        </header>
+        <main class='main'>
+            <div class="columns clearfix">
+                <table><tbody><tr>
+                    <td>
+                        <table class="w900">
+                            <tr>
+                                <td>
+                                    <div class="columns clearfix">
+                                        <table class="rh1 column w300">
+                                            <th class="header w100">ステータス</th>
+                                            <td id="job_status_id" class="rh1" style="color: white">求人入力のみ【求人のみ使用】</td>
+                                        </table>
+                                        <table class="rh1 column w250">
+                                            <th class="w100 warning">クライアント</th>
+                                            <td id="work_description" class="rh1"></td>
+                                        </table>
+                                        <table class="rh1 column w250">
+                                            <th class="w75 warning">雇用形態</th>
+                                            <td id="contract" class="rh1"></td>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="columns clearfix">
+                                        <table class="rh1 column w150">
+                                            <th class="w75 warning">勤務期間</th>
+                                            <td id="tour_of_duty" class="rh1"></td>
+                                        </table>
+                                        <table class="rh1 column w350">
+                                            <th class="w75 warning">契約期間</th>
+                                            <td id="contractperiod" class="rh1"></td>
+                                        </table>
+                                        <table class="rh1 column w350">
+                                            <th class="w50 caution">枠</th>
+                                            <td id="open_position" class="rh1"></td>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table class="w900">
+                            <table class="column w650">
+                                <tr>
+                                    <th class="w75 caution">企業名</th>
+                                    <td id="company" class="rh1"></td>
+                                </tr>
+                                <tr>
+                                    <th class="w75 caution">勤務先住所</th>
+                                    <td id="work_address" class="rh1"></td>
+                                </tr>
+                                <tr>
+                                    <th class="w75 caution">最寄り駅</th>
+                                    <td id="closest_station" class="rh1"></td>
+                                </tr>
+                            </table>
+                            <table class="column w200">
+                                <th class="w75 caution">営業担当</th>
+                                <td id="account" class="rh1"></td>
+                            </table>
+                        </table>
+                    </td>
+                </tr></tbody></table>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <table class="column w900">
+                                <tbody>
+                                    <tr>
+                                        <th class="w75">通勤手段</th>
+                                        <td id="commute_method" class="checks rh1 w400"></td>
+                                        <th class="w75">交通費</th>
+                                        <td id="carfare" class="rh1 w100"></td>
+
+                                    </tr>
+                                    <tr>
+                                        <th class="w50">駐車場</th>
+                                        <td id="parking" class="rh1 w200"></td>
+                                        <th class="w75">備考</td>
+                                        <td >
+                                            <textarea readonly id="commute_detail" class="w550 rh4"></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="columns clearfix">
+                                <table class="column w900">
+                                    <tr>
+                                        <th class="w100 warning">仕事内容</th>
+                                        <td>
+                                            <textarea readonly id="job_outline" class="w400 rh4"></textarea>
+                                        </td>
+                                        <td>
+                                            <textarea readonly id="job_bikou" class="w350 rh4"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w125 rh2">職場環境・アピールポイントなど</th>
+                                        <td >
+                                            <textarea readonly id="environment" class="w750 rh4"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w100">取扱商品</th>
+                                        <td id="product" class="rh1"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w100">配送先</th>
+                                        <td id="delivery_destination" class="rh1"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w100">配送距離</hd>
+                                        <td id="delivery_distance" class="rh1"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w100">便</hd>
+                                        <td id="round" class="rh1 w350"></td>
+                                        <th class="w50">件数</hd>
+                                        <td id="round_count" class="rh1 "></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w100">商品運搬方法</th>
+                                        <td id="transportation_method" class="checks rh1"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="columns clearfix">
+                                <table class="rh1 column w900">
+                                    <tr>
+                                        <th class="w75">車種特記</th>
+                                        <td id="cartype_detail" class="rh1"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="columns clearfix">
+                                <table class="column w900">
+                                    <tr>
+                                        <th class="w75 warning">必須資格</th>
+                                        <td>
+                                            <textarea readonly id="required_qualification" class="w800 rh3"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w100">推奨資格・免許</th>
+                                        <td >
+                                            <textarea readonly id="recommended_qualification" class="w750 rh3"></textarea>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="columns clearfix">
+                                <table class="rh1 column w900">
+                                    <tr>
+                                        <th class="w125 warning">トラック乗車経験</th>
+                                        <td id="ride_experience" class="w200 checks"></td>
+                                        <td id="ride_experience_detail" class="rh1"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w125 warning">配送経験</th>
+                                        <td id="delivery_experience" class="w200 checks"></td>
+                                        <td id="delivery_experience_detail" class="rh1"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w125 warning">フォーク経験</th>
+                                        <td id="fork_experience" class="w200 checks"></td>
+                                        <td id="fork_experience_detail" class="rh1"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w125 warning">その他経験</th>
+                                        <td id="other_experience" class="w200 checks"></td>
+                                        <td id="other_experience_detail" class="rh1"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="columns clearfix">
+                                <table class="rh1 column w900">
+                                    <tr>
+                                        <th class="w50 warning">性別</th>
+                                        <td id="sex_limit" class="w300 rh1 checks"></td>
+                                        <th class="w75 warning">年齢制限</th>
+                                        <td id="age_limit" class="rh1"></td>
+                                    </tr>
+                                        <th class="w50 warning">外国人</th>
+                                        <td id="foreigner" class="checks w900"></td>
+                                    <tr>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="columns clearfix">
+                                <table class="rh1 column w900">
+                                    <tr>
+                                        <th class="w150 warning">面接注意事項</th>
+                                        <td>
+                                            <textarea readonly id="interview_considerations" class="w700 rh4"></textarea>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="columns clearfix">
+                                <table class="rh1 column w900">
+                                    <tr>
+                                        <th class="w75 warning">制服</th>
+                                        <td id="uniform" class="rh1"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w125">制服詳細・福利厚生</th>
+                                        <td>
+                                            <textarea readonly id="welfare_benefits" class="w750 rh4"></textarea>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="columns clearfix">
+                                <table class="rh1 column w900">
+                                    <tr>
+                                        <th class="w75 warning">給与</th>
+                                        <td id="salary" class="rh1 w100"></td>
+                                        <th class="w75">日額下限</th>
+                                        <td id="daily_under" class="rh1 w100"></td>
+                                        <th class="w75">月収モデル</th>
+                                        <td id="salary_month" class="rh1 w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w75">研修時給</th>
+                                        <td id="trainy_hourly" class="rh1 w100"></td>
+                                        <th class="w75">研修終了</th>
+                                        <td id="training_end" class="rh1"></td>
+
+                                    </tr>
+                                    <tr>
+                                        <th class="w75">日給保障</th>
+                                        <td id="daily_guarantee" class="rh1 w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w75">給与特記</th>
+                                        <td>
+                                            <textarea readonly id="salaly_detail" class="w350 rh4"></textarea>
+                                        </td>
+                                        <th class="w75">研修特記</th>
+                                        <td>
+                                            <textarea readonly id="trainy_detail" class="w350 rh4"></textarea>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="columns clearfix">
+                                <table class="column w900">
+                                    <tr>
+                                        <th class="w75 warning">勤務曜日</th>
+                                        <td>
+                                            <textarea readonly id="weekday" class="w800 rh4"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w50 warning">休日</th>
+                                        <td id="holiday" class="rh1 w550"></td>
+                                        <th class="w75">勤務日数</th>
+                                        <td id="workdayofweek" class="rh1"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="columns clearfix">
+                                <table class="rh1 column w900">
+                                    <tr>
+                                        <th class="w50 warning">時間1</th>
+                                        <td id="worktime1" class="rh1 w150"></td>
+                                        <th class="w50 warning">時間2</th>
+                                        <td id="worktime2" class="rh1 w150"></td>
+                                        <th class="w50 warning">時間3</th>
+                                        <td id="worktime3" class="rh1 w150"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w100">勤務時間備考</th>
+                                        <td>
+                                            <textarea readonly id="worktimedetail" class="w750 rh4"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w100">休憩 / 時間帯</th>
+                                        <td id="resttime" class="rh1 w450"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w75">深夜時間</th>
+                                        <td id="midnighttime" class="rh1 w300"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="w100">残業時間(内)</th>
+                                        <td id="overtime_in" class="rh1 w250"></td>
+                                        <th class="w100">残業時間(外)</th>
+                                        <td id="overtime_out" class="w250"></td>
+                                        <th class="w75">拘束時間</th>
+                                        <td id="bound_time" class="W125"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <script src="offer.js" charset="utf-8"></script>
+        </main>
+    </body>
+</html>

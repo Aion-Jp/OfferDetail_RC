@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "version": "1.0.0.3",
+    "name": "OfferDetail for RC",
+    "description": "求人センター向け案件詳細を開きます",
+    "icons": {
+        "32": "icons/3ball_32.png",
+        "48": "icons/3ball_48.png",
+        "128": "icons/3ball_128.png"
+    },
+    "content_scripts":[
+        {
+          "run_at": "document_end",
+          "matches": ["https://www36.rpm-sys.jp/RPMv4-artista/index.cfm?fuseaction=Job.Update&selected_tab=tab_JobDetail*"],
+          "js": ["js/content_scripts.js","js/jquery-3.4.1.min.js"]
+        }
+    ],
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": true
+    },
+    "page_action": {
+        "default_title": "求人センター向け案件詳細を開きます",
+        "default_icon": {"19": "icons/3ball_19.png"}
+    },
+    "permissions": [
+            "tabs",
+            "activeTab",
+            "declarativeContent"
+        ],
+    "author": "MTZNo"
+}

@@ -1,0 +1,139 @@
+@charset "UTF-8";
+.clearfix::after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+
+*{
+font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+font-size: 12px;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-o-box-sizing: border-box;
+-ms-box-sizing: border-box;
+}
+table {
+    border-collapse:separate;
+    border-spacing: 0px;
+}
+td {
+    padding: 0px;
+    vertical-align: top;
+}
+input[type=checkbox]{
+    padding-top: 2px;
+
+}
+input[type=checkbox][checked]{
+    outline:1px solid red;
+}
+body {
+    background-color: azure;
+}
+textarea {
+    margin: 0px 0px 5px 0px;
+    resize: none;
+    border: none;
+    outline: none;
+
+}
+textarea:focus {
+    outline: none;
+}
+input,input:focus {
+    border: none;
+    outline: none;
+}
+.header h2 {
+  border-bottom: 2px solid #4472C4;
+}
+.column {
+  height:  auto;
+  padding: 1px;
+  margin: 0 0 5px 5px;
+  text-align: left;
+  background-color: white;
+  border: 2px solid #666666;
+  border-radius: 5px;
+  box-shadow: inset 0 0 2px #000;
+  float: left;
+}
+.column th {
+  height: 2.0rem;
+  margin: 0.2px 0px 0.2px 0.2px;
+  padding: 0px 5px 0px 5px;
+  text-align: left;
+  color: #1D468B;
+  text-shadow: #888 0 0.1px;
+  background-color: #C0E3FC;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius:  4px;
+  border: solid 1px #95a7f4;
+  float: left;
+  display: flex;
+  align-items: center; /* 縦方向中央揃え */
+  display: -webkit-flex;
+  -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+}
+.column td {
+  height: auto;
+  margin: 0.2px 0px 0.2px 0.2px;
+  padding: 0px 5px 0px 5px;
+  text-align: left;
+  overflow-wrap: break-word;
+  float: left;
+  display: flex;
+  align-items: center; /* 縦方向中央揃え */
+  display: -webkit-flex;
+  -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+}
+
+ .w50  {  width:   50px !important;}  .w75  {  width:   75px !important;}
+ .w100 {  width:  100px !important;}  .w125 {  width:  125px !important;}
+ .w150 {  width:  150px !important;}  .w175 {  width:  175px !important;}
+ .w200 {  width:  200px !important;}  .w250 {  width:  250px !important;}
+ .w300 {  width:  300px !important;}  .w350 {  width:  350px !important;}
+ .w400 {  width:  400px !important;}  .w450 {  width:  450px !important;}
+ .w500 {  width:  500px !important;}  .w550 {  width:  550px !important;}
+ .w600 {  width:  600px !important;}  .w650 {  width:  650px !important;}
+ .w700 {  width:  700px !important;}  .w750 {  width:  750px !important;}
+ .w800 {  width:  800px !important;}  .w850 {  width:  850px !important;}
+ .w900 {  width:  900px !important;}  .w950 {  width:  950px !important;}
+.w1000 {  width: 1000px !important;} .w1050 {  width: 1050px !important;}
+.w1100 {  width: 1100px !important;} .w1150 {  width: 1150px !important;}
+.w1200 {  width: 1200px !important;} .w1250 {  width: 1250px !important;}
+
+.rh1   {  height:  2.0rem !important;} .rh2 {  height:  3.0rem !important;}
+.rh3   {  height:  4.0rem !important;} .rh4 {  height:  5.0rem !important;}
+
+.h60   {  height:  60px !important;}   .h75 {  height:  75px !important;}
+.h90   {  height:  90px !important;}  .h120 {  height: 120px !important;}
+.h125  {  height: 125px !important;}  .h150 {  height: 150px !important;}
+.h180  {  height: 180px !important;}
+
+.caution {
+    border: none !important;
+    background-color: gold !important;
+    text-shadow: #bbb 0 1px !important;
+    color: #000 !important;
+}
+.warning {
+    border: none !important;
+    text-shadow: #222 0 1px !important;
+    color: #fee !important;
+    background-color: crimson !important;
+}
+.checks {
+    display: block !important;
+    align-items: center; /* 縦方向中央揃え */
+    vertical-align: middle;
+}
+.checks input {
+    padding-top: 5px;
+    vertical-align: middle;
+}
+#shigoto_no {
+    font-size: 16px;
+}
